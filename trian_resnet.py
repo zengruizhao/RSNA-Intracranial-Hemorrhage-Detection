@@ -1,13 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-@File    : trian_res34.py
-@Time    : 2019/6/23 15:40
-@Author  : Parker
-@Email   : now_cherish@163.com
-@Software: PyCharm
-@Des     : 
-"""
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -24,55 +15,52 @@ import os.path as osp
 
 from rs_dataset import RSDataset
 from get_logger import get_logger
-from res_network import Resnet18, Resnet34, Resnet101, Densenet121
+from res_network import Resnet18, Resnet34, Resnet101, Densenet121, SEResNext50
 
 
 def parse_args():
     parse = argparse.ArgumentParser()
     parse.add_argument('--epoch', type=int, default=15)
-    parse.add_argument('--schedule_step', type=int, default=2)
+    parse.add_argument('--schedule_step', type=int, default=4)
 
     parse.add_argument('--batch_size', type=int, default=64)
     parse.add_argument('--test_batch_size', type=int, default=128)
-    parse.add_argument('--num_workers', type=int, default=16)
+    parse.add_argument('--num_workers', type=int, default=32)
 
     parse.add_argument('--eval_fre', type=int, default=1)
     parse.add_argument('--msg_fre', type=int, default=10)
-    parse.add_argument('--save_fre', type=int, default=2)
+    parse.add_argument('--save_fre', type=int, default=1)
 
-    parse.add_argument('--name', type=str, default='mobilenetv2_dataClean_mode1', help='log/model_out/tensorboard log')
-    parse.add_argument('--data_dir', type=str, default='/media/tiger/zzr/rsna/data')
+    parse.add_argument('--name', type=str, default='temp', help='log/model_out/tensorboard log')
+    parse.add_argument('--data_dir', type=str, default='/media/tiger/zzr/rsna')
     parse.add_argument('--log_dir', type=str, default='./logs')
     parse.add_argument('--tensorboard_dir', type=str, default='./tensorboard')
     parse.add_argument('--model_out_dir', type=str, default='./model_out')
     parse.add_argument('--model_out_name', type=str, default='final_model.pth')
     parse.add_argument('--seed', type=int, default=5, help='random seed')
+    parse.add_argument('--predefinedModel', type=str, default='/media/tiger/zzr/rsna_script/model_out/191004-003700_temp/out_1.pth')
     return parse.parse_args()
 
 
 def evalute(net, val_loader, writer, epoch, logger):
     logger.info('------------after epo {}, eval...-----------'.format(epoch))
-    total = 0
-    correct = 0
+    loss = 0
     net.eval()
     with torch.no_grad():
         for img,lb in val_loader:
             img, lb = img.cuda(), lb.cuda()
             outputs = net(img)
-            outputs = torch.sigmoid(outputs)
-            predicted = torch.max(outputs, dim=1)[1]
-            total += lb.size()[0]
+            loss += nn.BCELoss()(outputs, lb)
 
-            correct += (predicted == lb).sum().cpu().item()
-    logger.info('correct:{}/{}={:.4f}'.format(correct, total, correct*1./total, epoch))
-    writer.add_scalar('acc',correct*1./total,epoch)
+    loss /= len(val_loader)
+    logger.info('loss:{:.4f}/epoch{}'.format(loss, epoch))
+    writer.add_scalar('loss', loss)
     net.train()
 
 
 def main_worker(args, logger):
     try:
         writer = SummaryWriter(logdir=args.sub_tensorboard_dir)
-
         train_set = RSDataset(rootpth=args.data_dir, mode='train')
         train_loader = DataLoader(train_set,
                                   batch_size=args.batch_size,
@@ -81,28 +69,20 @@ def main_worker(args, logger):
                                   pin_memory=True,
                                   num_workers=args.num_workers)
 
-        val_set = RSDataset(rootpth=args.data_dir, mode='val')
-        val_loader = DataLoader(val_set,
-                                batch_size=args.test_batch_size,
-                                drop_last=True,
-                                shuffle=True,
-                                pin_memory=True,
-                                num_workers=args.num_workers)
-
+        # val_set = RSDataset(rootpth=args.data_dir, mode='train')
+        # val_loader = DataLoader(val_set,
+        #                         batch_size=args.test_batch_size,
+        #                         shuffle=False,
+        #                         pin_memory=True,
+        #                         num_workers=args.num_workers)
         net = Resnet18()
-        # print(net)
         net = net.train()
-        input_ = torch.randn((1, 1, 512, 512))
-        # writer.add_graph(net, input_)
-
         net = net.cuda()
-
-        criterion = nn.CrossEntropyLoss().cuda()
-
+        # net.load_state_dict(torch.load(args.predefinedModel))
+        criterion = nn.BCELoss().cuda()
+        # criterion = nn.CrossEntropyLoss().cuda()
         optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
-
         scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=args.schedule_step, gamma=0.3)
-
         loss_record = []
 
         iter = 0
@@ -110,10 +90,10 @@ def main_worker(args, logger):
         st = glob_st = time.time()
         total_iter = len(train_loader)*args.epoch
         for epoch in range(args.epoch):
-
             # 评估
-            if epoch != 0 and epoch % args.eval_fre == 0:
-                evalute(net, val_loader, writer, epoch, logger)
+            # evalute(net, val_loader, writer, epoch, logger)
+            # if epoch != 0 and epoch % args.eval_fre == 0:
+            #     evalute(net, val_loader, writer, epoch, logger)
 
             if epoch != 0 and epoch % args.save_fre == 0:
                 model_out_name = osp.join(args.sub_model_out_dir,'out_{}.pth'.format(epoch))
@@ -125,15 +105,9 @@ def main_worker(args, logger):
                 iter += 1
                 img = img.cuda()
                 lb = lb.cuda()
-
-
                 optimizer.zero_grad()
-
                 outputs = net(img)
-                # print(lb.shape)
-                # print(outputs.shape)
                 loss = criterion(outputs, lb)
-
                 loss.backward()
                 optimizer.step()
 
@@ -178,7 +152,7 @@ def main_worker(args, logger):
 
             scheduler.step()
         # 训练完最后评估一次
-        evalute(net, val_loader, writer, args.epoch, logger)
+        # evalute(net, val_loader, writer, args.epoch, logger)
 
         out_name = osp.join(args.sub_model_out_dir,args.model_out_name)
         torch.save(net.cpu().state_dict(),out_name)

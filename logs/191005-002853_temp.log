@@ -1,0 +1,53 @@
+2019-10-05 00:28:53,051 - root - INFO - epoch
+2019-10-05 00:28:53,051 - root - INFO - 15
+2019-10-05 00:28:53,051 - root - INFO - schedule_step
+2019-10-05 00:28:53,051 - root - INFO - 4
+2019-10-05 00:28:53,051 - root - INFO - batch_size
+2019-10-05 00:28:53,051 - root - INFO - 64
+2019-10-05 00:28:53,051 - root - INFO - test_batch_size
+2019-10-05 00:28:53,051 - root - INFO - 128
+2019-10-05 00:28:53,051 - root - INFO - num_workers
+2019-10-05 00:28:53,051 - root - INFO - 32
+2019-10-05 00:28:53,051 - root - INFO - eval_fre
+2019-10-05 00:28:53,051 - root - INFO - 1
+2019-10-05 00:28:53,051 - root - INFO - msg_fre
+2019-10-05 00:28:53,051 - root - INFO - 10
+2019-10-05 00:28:53,051 - root - INFO - save_fre
+2019-10-05 00:28:53,051 - root - INFO - 1
+2019-10-05 00:28:53,051 - root - INFO - name
+2019-10-05 00:28:53,051 - root - INFO - temp
+2019-10-05 00:28:53,051 - root - INFO - data_dir
+2019-10-05 00:28:53,051 - root - INFO - /media/tiger/zzr/rsna
+2019-10-05 00:28:53,052 - root - INFO - log_dir
+2019-10-05 00:28:53,052 - root - INFO - ./logs
+2019-10-05 00:28:53,052 - root - INFO - tensorboard_dir
+2019-10-05 00:28:53,052 - root - INFO - ./tensorboard
+2019-10-05 00:28:53,052 - root - INFO - model_out_dir
+2019-10-05 00:28:53,052 - root - INFO - ./model_out
+2019-10-05 00:28:53,052 - root - INFO - model_out_name
+2019-10-05 00:28:53,052 - root - INFO - final_model.pth
+2019-10-05 00:28:53,052 - root - INFO - seed
+2019-10-05 00:28:53,052 - root - INFO - 5
+2019-10-05 00:28:53,052 - root - INFO - predefinedModel
+2019-10-05 00:28:53,052 - root - INFO - /media/tiger/zzr/rsna_script/model_out/191004-003700_temp/out_1.pth
+2019-10-05 00:28:53,052 - root - INFO - unique_name
+2019-10-05 00:28:53,052 - root - INFO - 191005-002853_temp
+2019-10-05 00:28:53,052 - root - INFO - sub_tensorboard_dir
+2019-10-05 00:28:53,052 - root - INFO - ./tensorboard/191005-002853_temp
+2019-10-05 00:28:53,052 - root - INFO - sub_model_out_dir
+2019-10-05 00:28:53,052 - root - INFO - ./model_out/191005-002853_temp
+2019-10-05 00:29:16,377 - root - ERROR - Exception logged
+Traceback (most recent call last):
+  File "/media/tiger/zzr/rsna_script/trian_resnet.py", line 104, in main_worker
+    for img, lb in train_loader:
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 576, in __next__
+    idx, batch = self._get_batch()
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 543, in _get_batch
+    success, data = self._try_get_batch()
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 511, in _try_get_batch
+    data = self.data_queue.get(timeout=timeout)
+  File "/home/tiger/anaconda3/lib/python3.7/queue.py", line 179, in get
+    self.not_empty.wait(remaining)
+  File "/home/tiger/anaconda3/lib/python3.7/threading.py", line 300, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

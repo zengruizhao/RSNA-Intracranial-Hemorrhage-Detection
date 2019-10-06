@@ -1,0 +1,45 @@
+2019-10-03 23:37:20,828 - root - INFO - epoch
+2019-10-03 23:37:20,829 - root - INFO - 15
+2019-10-03 23:37:20,829 - root - INFO - schedule_step
+2019-10-03 23:37:20,829 - root - INFO - 4
+2019-10-03 23:37:20,829 - root - INFO - batch_size
+2019-10-03 23:37:20,829 - root - INFO - 64
+2019-10-03 23:37:20,829 - root - INFO - test_batch_size
+2019-10-03 23:37:20,829 - root - INFO - 128
+2019-10-03 23:37:20,829 - root - INFO - num_workers
+2019-10-03 23:37:20,829 - root - INFO - 16
+2019-10-03 23:37:20,829 - root - INFO - eval_fre
+2019-10-03 23:37:20,829 - root - INFO - 1
+2019-10-03 23:37:20,829 - root - INFO - msg_fre
+2019-10-03 23:37:20,829 - root - INFO - 10
+2019-10-03 23:37:20,829 - root - INFO - save_fre
+2019-10-03 23:37:20,829 - root - INFO - 1
+2019-10-03 23:37:20,829 - root - INFO - name
+2019-10-03 23:37:20,829 - root - INFO - temp
+2019-10-03 23:37:20,830 - root - INFO - data_dir
+2019-10-03 23:37:20,830 - root - INFO - /media/tiger/zzr/rsna
+2019-10-03 23:37:20,830 - root - INFO - log_dir
+2019-10-03 23:37:20,830 - root - INFO - ./logs
+2019-10-03 23:37:20,830 - root - INFO - tensorboard_dir
+2019-10-03 23:37:20,830 - root - INFO - ./tensorboard
+2019-10-03 23:37:20,830 - root - INFO - model_out_dir
+2019-10-03 23:37:20,830 - root - INFO - ./model_out
+2019-10-03 23:37:20,830 - root - INFO - model_out_name
+2019-10-03 23:37:20,830 - root - INFO - final_model.pth
+2019-10-03 23:37:20,830 - root - INFO - seed
+2019-10-03 23:37:20,830 - root - INFO - 5
+2019-10-03 23:37:20,830 - root - INFO - unique_name
+2019-10-03 23:37:20,830 - root - INFO - 191003-233720_temp
+2019-10-03 23:37:20,830 - root - INFO - sub_tensorboard_dir
+2019-10-03 23:37:20,830 - root - INFO - ./tensorboard/191003-233720_temp
+2019-10-03 23:37:20,830 - root - INFO - sub_model_out_dir
+2019-10-03 23:37:20,830 - root - INFO - ./model_out/191003-233720_temp
+2019-10-03 23:37:35,526 - root - ERROR - Exception logged
+Traceback (most recent call last):
+  File "/media/tiger/zzr/rsna_script/trian_resnet.py", line 71, in main_worker
+    val_set = RSDataset(rootpth=args.data_dir, mode='train')
+  File "/media/tiger/zzr/rsna_script/rs_dataset.py", line 88, in __init__
+    self.labels = self.prepare_label()
+  File "/media/tiger/zzr/rsna_script/rs_dataset.py", line 145, in prepare_label
+    all_true_labels[id][label_id] = float(row[1])
+KeyboardInterrupt

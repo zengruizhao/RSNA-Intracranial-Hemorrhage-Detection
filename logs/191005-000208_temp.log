@@ -1,0 +1,97 @@
+2019-10-05 00:02:08,813 - root - INFO - epoch
+2019-10-05 00:02:08,813 - root - INFO - 15
+2019-10-05 00:02:08,814 - root - INFO - schedule_step
+2019-10-05 00:02:08,814 - root - INFO - 4
+2019-10-05 00:02:08,814 - root - INFO - batch_size
+2019-10-05 00:02:08,814 - root - INFO - 64
+2019-10-05 00:02:08,814 - root - INFO - test_batch_size
+2019-10-05 00:02:08,814 - root - INFO - 128
+2019-10-05 00:02:08,814 - root - INFO - num_workers
+2019-10-05 00:02:08,814 - root - INFO - 32
+2019-10-05 00:02:08,814 - root - INFO - eval_fre
+2019-10-05 00:02:08,814 - root - INFO - 1
+2019-10-05 00:02:08,814 - root - INFO - msg_fre
+2019-10-05 00:02:08,814 - root - INFO - 10
+2019-10-05 00:02:08,814 - root - INFO - save_fre
+2019-10-05 00:02:08,814 - root - INFO - 1
+2019-10-05 00:02:08,814 - root - INFO - name
+2019-10-05 00:02:08,814 - root - INFO - temp
+2019-10-05 00:02:08,814 - root - INFO - data_dir
+2019-10-05 00:02:08,814 - root - INFO - /media/tiger/zzr/rsna
+2019-10-05 00:02:08,814 - root - INFO - log_dir
+2019-10-05 00:02:08,814 - root - INFO - ./logs
+2019-10-05 00:02:08,814 - root - INFO - tensorboard_dir
+2019-10-05 00:02:08,814 - root - INFO - ./tensorboard
+2019-10-05 00:02:08,814 - root - INFO - model_out_dir
+2019-10-05 00:02:08,814 - root - INFO - ./model_out
+2019-10-05 00:02:08,814 - root - INFO - model_out_name
+2019-10-05 00:02:08,814 - root - INFO - final_model.pth
+2019-10-05 00:02:08,815 - root - INFO - seed
+2019-10-05 00:02:08,815 - root - INFO - 5
+2019-10-05 00:02:08,815 - root - INFO - predefinedModel
+2019-10-05 00:02:08,815 - root - INFO - /media/tiger/zzr/rsna_script/model_out/191004-003700_temp/out_1.pth
+2019-10-05 00:02:08,815 - root - INFO - unique_name
+2019-10-05 00:02:08,815 - root - INFO - 191005-000208_temp
+2019-10-05 00:02:08,815 - root - INFO - sub_tensorboard_dir
+2019-10-05 00:02:08,815 - root - INFO - ./tensorboard/191005-000208_temp
+2019-10-05 00:02:08,815 - root - INFO - sub_model_out_dir
+2019-10-05 00:02:08,815 - root - INFO - ./model_out/191005-000208_temp
+2019-10-05 00:02:38,979 - root - INFO - epoch:0. iter/total_iter:10/158025. lr:0.00100. loss:0.6938. spend/global_spend:16.3632/0:00:16. eta:2 days, 23:49:22
+2019-10-05 00:02:43,958 - root - INFO - epoch:0. iter/total_iter:20/158025. lr:0.00100. loss:0.2876. spend/global_spend:4.9798/0:00:21. eta:1 day, 22:50:15
+2019-10-05 00:02:48,546 - root - INFO - epoch:0. iter/total_iter:30/158025. lr:0.00100. loss:0.2106. spend/global_spend:4.5874/0:00:25. eta:1 day, 13:56:02
+2019-10-05 00:02:53,174 - root - INFO - epoch:0. iter/total_iter:40/158025. lr:0.00100. loss:0.1988. spend/global_spend:4.6266/0:00:30. eta:1 day, 9:31:28
+2019-10-05 00:02:57,806 - root - INFO - epoch:0. iter/total_iter:50/158025. lr:0.00100. loss:0.2062. spend/global_spend:4.6329/0:00:35. eta:1 day, 6:53:02
+2019-10-05 00:03:02,426 - root - INFO - epoch:0. iter/total_iter:60/158025. lr:0.00100. loss:0.1786. spend/global_spend:4.6208/0:00:39. eta:1 day, 5:06:51
+2019-10-05 00:03:07,102 - root - INFO - epoch:0. iter/total_iter:70/158025. lr:0.00100. loss:0.2058. spend/global_spend:4.6756/0:00:44. eta:1 day, 3:53:03
+2019-10-05 00:03:11,762 - root - INFO - epoch:0. iter/total_iter:80/158025. lr:0.00100. loss:0.2195. spend/global_spend:4.6600/0:00:49. eta:1 day, 2:57:10
+2019-10-05 00:03:16,534 - root - INFO - epoch:0. iter/total_iter:90/158025. lr:0.00100. loss:0.2069. spend/global_spend:4.7728/0:00:53. eta:1 day, 2:16:59
+2019-10-05 00:03:21,280 - root - INFO - epoch:0. iter/total_iter:100/158025. lr:0.00100. loss:0.1982. spend/global_spend:4.7448/0:00:58. eta:1 day, 1:44:05
+2019-10-05 00:03:26,007 - root - INFO - epoch:0. iter/total_iter:110/158025. lr:0.00100. loss:0.1935. spend/global_spend:4.7278/0:01:03. eta:1 day, 1:16:44
+2019-10-05 00:03:30,678 - root - INFO - epoch:0. iter/total_iter:120/158025. lr:0.00100. loss:0.1970. spend/global_spend:4.6707/0:01:08. eta:1 day, 0:52:41
+2019-10-05 00:03:35,394 - root - INFO - epoch:0. iter/total_iter:130/158025. lr:0.00100. loss:0.2025. spend/global_spend:4.7158/0:01:12. eta:1 day, 0:33:14
+2019-10-05 00:03:40,176 - root - INFO - epoch:0. iter/total_iter:140/158025. lr:0.00100. loss:0.1885. spend/global_spend:4.7822/0:01:17. eta:1 day, 0:17:48
+2019-10-05 00:03:44,930 - root - INFO - epoch:0. iter/total_iter:150/158025. lr:0.00100. loss:0.2183. spend/global_spend:4.7539/0:01:22. eta:1 day, 0:03:55
+2019-10-05 00:03:49,645 - root - INFO - epoch:0. iter/total_iter:160/158025. lr:0.00100. loss:0.2036. spend/global_spend:4.7156/0:01:27. eta:23:51:08
+2019-10-05 00:03:54,390 - root - INFO - epoch:0. iter/total_iter:170/158025. lr:0.00100. loss:0.1995. spend/global_spend:4.7450/0:01:31. eta:23:40:18
+2019-10-05 00:03:59,141 - root - INFO - epoch:0. iter/total_iter:180/158025. lr:0.00100. loss:0.1925. spend/global_spend:4.7511/0:01:36. eta:23:30:45
+2019-10-05 00:04:03,896 - root - INFO - epoch:0. iter/total_iter:190/158025. lr:0.00100. loss:0.2073. spend/global_spend:4.7544/0:01:41. eta:23:22:14
+2019-10-05 00:04:08,601 - root - INFO - epoch:0. iter/total_iter:200/158025. lr:0.00100. loss:0.1590. spend/global_spend:4.7028/0:01:45. eta:23:13:53
+2019-10-05 00:04:13,325 - root - INFO - epoch:0. iter/total_iter:210/158025. lr:0.00100. loss:0.1771. spend/global_spend:4.7269/0:01:50. eta:23:06:38
+2019-10-05 00:04:18,010 - root - INFO - epoch:0. iter/total_iter:220/158025. lr:0.00100. loss:0.1531. spend/global_spend:4.6841/0:01:55. eta:22:59:31
+2019-10-05 00:04:22,664 - root - INFO - epoch:0. iter/total_iter:230/158025. lr:0.00100. loss:0.1705. spend/global_spend:4.6548/0:02:00. eta:22:52:41
+2019-10-05 00:04:27,338 - root - INFO - epoch:0. iter/total_iter:240/158025. lr:0.00100. loss:0.1940. spend/global_spend:4.6740/0:02:04. eta:22:46:37
+2019-10-05 00:04:32,022 - root - INFO - epoch:0. iter/total_iter:250/158025. lr:0.00100. loss:0.1835. spend/global_spend:4.6839/0:02:09. eta:22:41:08
+2019-10-05 00:04:36,685 - root - INFO - epoch:0. iter/total_iter:260/158025. lr:0.00100. loss:0.1921. spend/global_spend:4.6624/0:02:14. eta:22:35:51
+2019-10-05 00:04:41,339 - root - INFO - epoch:0. iter/total_iter:270/158025. lr:0.00100. loss:0.1824. spend/global_spend:4.6541/0:02:18. eta:22:30:53
+2019-10-05 00:04:46,052 - root - INFO - epoch:0. iter/total_iter:280/158025. lr:0.00100. loss:0.1824. spend/global_spend:4.7129/0:02:23. eta:22:26:48
+2019-10-05 00:04:50,819 - root - INFO - epoch:0. iter/total_iter:290/158025. lr:0.00100. loss:0.1782. spend/global_spend:4.7673/0:02:28. eta:22:23:29
+2019-10-05 00:04:57,951 - root - INFO - epoch:0. iter/total_iter:300/158025. lr:0.00100. loss:0.1759. spend/global_spend:7.1318/0:02:35. eta:22:41:07
+2019-10-05 00:05:08,715 - root - INFO - epoch:0. iter/total_iter:310/158025. lr:0.00100. loss:0.1648. spend/global_spend:10.7636/0:02:46. eta:23:28:24
+2019-10-05 00:05:14,851 - root - INFO - epoch:0. iter/total_iter:320/158025. lr:0.00100. loss:0.1918. spend/global_spend:6.1362/0:02:52. eta:23:34:42
+2019-10-05 00:05:30,430 - root - INFO - epoch:0. iter/total_iter:330/158025. lr:0.00100. loss:0.1772. spend/global_spend:15.5790/0:03:07. eta:1 day, 0:55:49
+2019-10-05 00:05:40,711 - root - INFO - epoch:0. iter/total_iter:340/158025. lr:0.00100. loss:0.1768. spend/global_spend:10.2816/0:03:18. eta:1 day, 1:31:12
+2019-10-05 00:05:48,472 - root - INFO - epoch:0. iter/total_iter:350/158025. lr:0.00100. loss:0.1669. spend/global_spend:7.7605/0:03:25. eta:1 day, 1:45:38
+2019-10-05 00:06:00,385 - root - INFO - epoch:0. iter/total_iter:360/158025. lr:0.00100. loss:0.1807. spend/global_spend:11.9132/0:03:37. eta:1 day, 2:29:33
+2019-10-05 00:06:20,594 - root - INFO - epoch:0. iter/total_iter:370/158025. lr:0.00100. loss:0.2054. spend/global_spend:20.2091/0:03:57. eta:1 day, 4:10:01
+2019-10-05 00:06:25,719 - root - INFO - epoch:0. iter/total_iter:380/158025. lr:0.00100. loss:0.1905. spend/global_spend:5.1248/0:04:03. eta:1 day, 4:00:52
+2019-10-05 00:06:33,303 - root - INFO - epoch:0. iter/total_iter:390/158025. lr:0.00100. loss:0.2015. spend/global_spend:7.5841/0:04:10. eta:1 day, 4:08:45
+2019-10-05 00:06:51,528 - root - INFO - epoch:0. iter/total_iter:400/158025. lr:0.00100. loss:0.1551. spend/global_spend:18.2254/0:04:28. eta:1 day, 5:26:08
+2019-10-05 00:07:01,641 - root - INFO - epoch:0. iter/total_iter:410/158025. lr:0.00100. loss:0.1946. spend/global_spend:10.1128/0:04:39. eta:1 day, 5:47:44
+2019-10-05 00:07:12,589 - root - INFO - epoch:0. iter/total_iter:420/158025. lr:0.00100. loss:0.1763. spend/global_spend:10.9475/0:04:49. eta:1 day, 6:13:32
+2019-10-05 00:07:26,194 - root - INFO - epoch:0. iter/total_iter:430/158025. lr:0.00100. loss:0.1708. spend/global_spend:13.6057/0:05:03. eta:1 day, 6:54:21
+2019-10-05 00:07:35,196 - root - INFO - epoch:0. iter/total_iter:440/158025. lr:0.00100. loss:0.1384. spend/global_spend:9.0018/0:05:12. eta:1 day, 7:05:50
+2019-10-05 00:07:41,913 - root - INFO - epoch:0. iter/total_iter:450/158025. lr:0.00100. loss:0.1869. spend/global_spend:6.7168/0:05:19. eta:1 day, 7:03:27
+2019-10-05 00:08:00,399 - root - INFO - epoch:0. iter/total_iter:460/158025. lr:0.00100. loss:0.1597. spend/global_spend:18.4861/0:05:37. eta:1 day, 8:08:21
+2019-10-05 00:08:12,971 - root - INFO - epoch:0. iter/total_iter:470/158025. lr:0.00100. loss:0.2142. spend/global_spend:12.5720/0:05:50. eta:1 day, 8:37:27
+2019-10-05 00:08:17,604 - root - INFO - epoch:0. iter/total_iter:480/158025. lr:0.00100. loss:0.1761. spend/global_spend:4.6327/0:05:54. eta:1 day, 8:21:53
+2019-10-05 00:08:30,189 - root - INFO - epoch:0. iter/total_iter:490/158025. lr:0.00100. loss:0.1585. spend/global_spend:12.5857/0:06:07. eta:1 day, 8:49:35
+2019-10-05 00:08:49,793 - root - INFO - epoch:0. iter/total_iter:500/158025. lr:0.00100. loss:0.1591. spend/global_spend:19.6031/0:06:27. eta:1 day, 9:53:00
+2019-10-05 00:08:54,434 - root - INFO - epoch:0. iter/total_iter:510/158025. lr:0.00100. loss:0.1665. spend/global_spend:4.6412/0:06:31. eta:1 day, 9:36:54
+2019-10-05 00:09:00,932 - root - INFO - epoch:0. iter/total_iter:520/158025. lr:0.00100. loss:0.1632. spend/global_spend:6.4976/0:06:38. eta:1 day, 9:30:47
+2019-10-05 00:09:21,289 - root - INFO - epoch:0. iter/total_iter:530/158025. lr:0.00100. loss:0.1647. spend/global_spend:20.3574/0:06:58. eta:1 day, 10:33:33
+2019-10-05 00:09:25,898 - root - INFO - epoch:0. iter/total_iter:540/158025. lr:0.00100. loss:0.1684. spend/global_spend:4.6092/0:07:03. eta:1 day, 10:17:25
+2019-10-05 00:09:28,406 - root - ERROR - Exception logged
+Traceback (most recent call last):
+  File "/media/tiger/zzr/rsna_script/trian_resnet.py", line 114, in main_worker
+    running_loss.append(loss.item())
+KeyboardInterrupt
