@@ -122,6 +122,7 @@ class SEResNext50(nn.Module):
         super(SEResNext50, self).__init__()
         src_net = pretrainedmodels.__dict__['se_resnext50_32x4d'](num_classes=1000, pretrained='imagenet')
         modules = list(src_net.children())[:-2]
+        modules[0] = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
         self.features = nn.Sequential(*modules)
         self.classifier = nn.Linear(2048, n_classes)
         nn.init.constant_(self.classifier.bias, 0)
@@ -156,7 +157,7 @@ class Inceptionv4(nn.Module):
 
 
 if __name__ == '__main__':
-    net = Resnet18()
+    net = SEResNext50()
     print(net)
     # net = Densenet121()
     aa = torch.randn((5, 1, 512, 512))

@@ -1,0 +1,67 @@
+2019-10-06 13:28:21,739 - root - INFO - epoch
+2019-10-06 13:28:21,739 - root - INFO - 15
+2019-10-06 13:28:21,739 - root - INFO - schedule_step
+2019-10-06 13:28:21,739 - root - INFO - 4
+2019-10-06 13:28:21,740 - root - INFO - batch_size
+2019-10-06 13:28:21,740 - root - INFO - 32
+2019-10-06 13:28:21,740 - root - INFO - test_batch_size
+2019-10-06 13:28:21,740 - root - INFO - 128
+2019-10-06 13:28:21,740 - root - INFO - num_workers
+2019-10-06 13:28:21,740 - root - INFO - 32
+2019-10-06 13:28:21,740 - root - INFO - eval_fre
+2019-10-06 13:28:21,740 - root - INFO - 1
+2019-10-06 13:28:21,740 - root - INFO - msg_fre
+2019-10-06 13:28:21,740 - root - INFO - 10
+2019-10-06 13:28:21,740 - root - INFO - save_fre
+2019-10-06 13:28:21,740 - root - INFO - 1
+2019-10-06 13:28:21,740 - root - INFO - name
+2019-10-06 13:28:21,740 - root - INFO - SEResNext50
+2019-10-06 13:28:21,740 - root - INFO - data_dir
+2019-10-06 13:28:21,740 - root - INFO - /media/tiger/zzr/rsna
+2019-10-06 13:28:21,740 - root - INFO - log_dir
+2019-10-06 13:28:21,740 - root - INFO - ./logs
+2019-10-06 13:28:21,740 - root - INFO - tensorboard_dir
+2019-10-06 13:28:21,740 - root - INFO - ./tensorboard
+2019-10-06 13:28:21,740 - root - INFO - model_out_dir
+2019-10-06 13:28:21,740 - root - INFO - ./model_out
+2019-10-06 13:28:21,740 - root - INFO - model_out_name
+2019-10-06 13:28:21,740 - root - INFO - final_model.pth
+2019-10-06 13:28:21,741 - root - INFO - seed
+2019-10-06 13:28:21,741 - root - INFO - 5
+2019-10-06 13:28:21,741 - root - INFO - predefinedModel
+2019-10-06 13:28:21,741 - root - INFO - /media/tiger/zzr/rsna_script/model_out/191004-003700_temp/out_1.pth
+2019-10-06 13:28:21,741 - root - INFO - unique_name
+2019-10-06 13:28:21,741 - root - INFO - 191006-132821_SEResNext50
+2019-10-06 13:28:21,741 - root - INFO - sub_tensorboard_dir
+2019-10-06 13:28:21,741 - root - INFO - ./tensorboard/191006-132821_SEResNext50
+2019-10-06 13:28:21,741 - root - INFO - sub_model_out_dir
+2019-10-06 13:28:21,741 - root - INFO - ./model_out/191006-132821_SEResNext50
+2019-10-06 13:29:00,229 - root - ERROR - Exception logged
+Traceback (most recent call last):
+  File "/media/tiger/zzr/rsna_script/trian_resnet.py", line 109, in main_worker
+    outputs = net(img)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/media/tiger/zzr/rsna_script/res_network.py", line 131, in forward
+    features = self.features(x)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/pretrainedmodels-0.7.4-py3.7.egg/pretrainedmodels/models/senet.py", line 126, in forward
+    residual = self.downsample(x)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 338, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 2.00 GiB (GPU 0; 10.92 GiB total capacity; 8.63 GiB already allocated; 1.67 GiB free; 21.74 MiB cached)

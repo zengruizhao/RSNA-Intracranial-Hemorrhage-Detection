@@ -23,7 +23,7 @@ def parse_args():
     parse.add_argument('--epoch', type=int, default=15)
     parse.add_argument('--schedule_step', type=int, default=4)
 
-    parse.add_argument('--batch_size', type=int, default=64)
+    parse.add_argument('--batch_size', type=int, default=8)
     parse.add_argument('--test_batch_size', type=int, default=128)
     parse.add_argument('--num_workers', type=int, default=32)
 
@@ -31,7 +31,7 @@ def parse_args():
     parse.add_argument('--msg_fre', type=int, default=10)
     parse.add_argument('--save_fre', type=int, default=1)
 
-    parse.add_argument('--name', type=str, default='temp', help='log/model_out/tensorboard log')
+    parse.add_argument('--name', type=str, default='SEResNext50', help='log/model_out/tensorboard log')
     parse.add_argument('--data_dir', type=str, default='/media/tiger/zzr/rsna')
     parse.add_argument('--log_dir', type=str, default='./logs')
     parse.add_argument('--tensorboard_dir', type=str, default='./tensorboard')
@@ -75,7 +75,7 @@ def main_worker(args, logger):
         #                         shuffle=False,
         #                         pin_memory=True,
         #                         num_workers=args.num_workers)
-        net = Resnet18()
+        net = SEResNext50()
         net = net.train()
         net = net.cuda()
         # net.load_state_dict(torch.load(args.predefinedModel))

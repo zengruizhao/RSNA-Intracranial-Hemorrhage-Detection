@@ -1,0 +1,69 @@
+2019-10-06 13:29:43,287 - root - INFO - epoch
+2019-10-06 13:29:43,287 - root - INFO - 15
+2019-10-06 13:29:43,287 - root - INFO - schedule_step
+2019-10-06 13:29:43,287 - root - INFO - 4
+2019-10-06 13:29:43,287 - root - INFO - batch_size
+2019-10-06 13:29:43,287 - root - INFO - 8
+2019-10-06 13:29:43,287 - root - INFO - test_batch_size
+2019-10-06 13:29:43,287 - root - INFO - 128
+2019-10-06 13:29:43,287 - root - INFO - num_workers
+2019-10-06 13:29:43,288 - root - INFO - 32
+2019-10-06 13:29:43,288 - root - INFO - eval_fre
+2019-10-06 13:29:43,288 - root - INFO - 1
+2019-10-06 13:29:43,288 - root - INFO - msg_fre
+2019-10-06 13:29:43,288 - root - INFO - 10
+2019-10-06 13:29:43,288 - root - INFO - save_fre
+2019-10-06 13:29:43,288 - root - INFO - 1
+2019-10-06 13:29:43,288 - root - INFO - name
+2019-10-06 13:29:43,288 - root - INFO - SEResNext50
+2019-10-06 13:29:43,288 - root - INFO - data_dir
+2019-10-06 13:29:43,288 - root - INFO - /media/tiger/zzr/rsna
+2019-10-06 13:29:43,288 - root - INFO - log_dir
+2019-10-06 13:29:43,288 - root - INFO - ./logs
+2019-10-06 13:29:43,288 - root - INFO - tensorboard_dir
+2019-10-06 13:29:43,288 - root - INFO - ./tensorboard
+2019-10-06 13:29:43,288 - root - INFO - model_out_dir
+2019-10-06 13:29:43,288 - root - INFO - ./model_out
+2019-10-06 13:29:43,288 - root - INFO - model_out_name
+2019-10-06 13:29:43,288 - root - INFO - final_model.pth
+2019-10-06 13:29:43,288 - root - INFO - seed
+2019-10-06 13:29:43,288 - root - INFO - 5
+2019-10-06 13:29:43,288 - root - INFO - predefinedModel
+2019-10-06 13:29:43,289 - root - INFO - /media/tiger/zzr/rsna_script/model_out/191004-003700_temp/out_1.pth
+2019-10-06 13:29:43,289 - root - INFO - unique_name
+2019-10-06 13:29:43,289 - root - INFO - 191006-132943_SEResNext50
+2019-10-06 13:29:43,289 - root - INFO - sub_tensorboard_dir
+2019-10-06 13:29:43,289 - root - INFO - ./tensorboard/191006-132943_SEResNext50
+2019-10-06 13:29:43,289 - root - INFO - sub_model_out_dir
+2019-10-06 13:29:43,289 - root - INFO - ./model_out/191006-132943_SEResNext50
+2019-10-06 13:30:00,884 - root - ERROR - Exception logged
+Traceback (most recent call last):
+  File "/media/tiger/zzr/rsna_script/trian_resnet.py", line 109, in main_worker
+    outputs = net(img)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/media/tiger/zzr/rsna_script/res_network.py", line 131, in forward
+    features = self.features(x)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/pretrainedmodels-0.7.4-py3.7.egg/pretrainedmodels/models/senet.py", line 126, in forward
+    residual = self.downsample(x)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/modules/batchnorm.py", line 83, in forward
+    exponential_average_factor, self.eps)
+  File "/home/tiger/anaconda3/lib/python3.7/site-packages/torch/nn/functional.py", line 1697, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 256.00 MiB (GPU 0; 10.92 GiB total capacity; 10.23 GiB already allocated; 76.19 MiB free; 13.68 MiB cached)
